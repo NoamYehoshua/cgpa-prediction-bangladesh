@@ -1,0 +1,69 @@
+
+✅ מדריך עבודה עם GitHub לפרויקט – צוות CGPA
+
+🧭 שלב 1: הורדת הפרויקט למחשב
+-----------------------------------
+1. התקנת GIT:
+שלבים להתקנת Git:
+- כנס לאתר:
+https://git-scm.com/downloads
+
+-בחר Windows ולחץ על ההורדה.
+
+-תפעיל את קובץ ההתקנה (Installer) – פשוט "Next → Next → Install" ברוב השלבים.
+
+-בסוף ההתקנה, סמן "Launch Git Bash" ולחץ "Finish".
+
+2. פתח את Git Bash (חפש בתפריט התחלה: Git Bash)  
+
+3. עבור לתיקייה שבה אתה רוצה לשים את הפרויקט  (תבחרו תקייה):
+cd "/c/Users/your_user_name/Documents/your_project_folder"
+
+4. שכפל את הריפוזיטורי (תשנו את השם בקישור לשם של היוזר שלכם):
+git clone https://github.com/NoamYehoshua/cgpa-prediction-bangladesh.git .
+(שים לב לנקודה בסוף – כדי לשכפל לתוך התיקייה הנוכחית)
+
+
+🌿 שלב 2: עבודה על הענף האישי שלך
+-----------------------------------
+1. משוך את הענפים מהשרת:
+git fetch origin
+
+2. עבור לענף שלך:
+git checkout <branch-name>
+(לדוגמה: git checkout noam-work)
+
+3. ודא שאתה בענף הנכון:
+git branch
+(אמור להופיע כוכבית ליד הענף שלך)
+
+
+✍️ שלב 3: עבודה על הקבצים
+-----------------------------------
+- תפתח את התיקייה עם VS Code או RStudio
+- תיצור קובץ משלך, לדוגמה: noam_analysis.Rmd
+- תכתוב קוד, ניתוח, גרפים וכו'
+- תשמור (Ctrl + S)
+
+
+📤 שלב 4: שמירת העבודה ודחיפה ל-GitHub
+-----------------------------------
+git add .
+git commit -m "הוספתי את הניתוח שלי"
+git push origin <branch-name>
+(לדוגמה: git push origin noam-work)
+
+
+🔁 שלב 5: פתיחת Pull Request לאיחוד ל-main
+-----------------------------------
+1. כנס ל-GitHub לפרויקט
+2. לחץ על Pull Requests → New Pull Request
+3. בחר:
+   Base: main
+   Compare: noam-work (או שם הענף שלך)
+4. לחץ Create Pull Request
+5. כתוב תיאור קצר למה עשית ושלח
+
+📝 הערות:
+- לעבוד רק על הענף האישי שלך
+- לא נוגעים ב-main ישירות – הכול דרך Pull Request
